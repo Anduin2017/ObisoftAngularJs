@@ -1,5 +1,5 @@
 'use strict';
-angular.module('SensationApp', [
+angular.module('ObisoftAngularJs', [
 'ngRoute',
 'ngAnimate',
 'ngSanitize',

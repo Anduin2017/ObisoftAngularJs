@@ -1,6 +1,5 @@
 ﻿'use strict';
-angular.module('app.signin', [])
-.controller('signinController', [
+angular.module('app.signin', []).controller('signinController', [
 "$location", "$scope", "basicApiService","userInfo",
 function ($location, $scope, basicApiService, userInfo) {
     var foScope = $scope;
@@ -34,20 +33,20 @@ function ($location, $scope, basicApiService, userInfo) {
     };
     $scope.signintoserver = function () {
         var panel = $("#panelinSignin");
-        basicApiService.login(
+        basicApiService.logIn(
         $scope.userInfo.email,
         $scope.userInfo.password,
         $scope.userInfo.rememberme)
         .success(function (data) {
-            if (data.StatusCode == 200) {
+            if (data.Code == 0) {
                 $location.path('');
                 userInfo.refreshUsername();
             }
-            else if (data.StatusCode == 403) {
+            else if (data.Code == -1) {
                 $scope.errorinfo = "Invalid login attempt!";
                 $scope.shakeAsync(panel);
             }
-            else if (data.StatusCode == 406) {
+            else if (data.Code == -10) {
                 $scope.errorinfo = "Please input a valid Email!";
                 $scope.shakeAsync(panel);
             }

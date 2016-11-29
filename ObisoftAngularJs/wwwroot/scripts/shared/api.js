@@ -1,6 +1,6 @@
 ﻿"use strict";
-angular.module("app.apis", []).factory('basicApiService', ['$http', '$location',
-    function ($http, $location) {
+angular.module("app.apis", []).factory('basicApiService', ['$http', '$location', '$httpParamSerializerJQLike',
+    function ($http, $location, $httpParamSerializerJQLike) {
         var methods = {};
         methods = {
             serverAddress: 'https://www.obisoft.com.cn',
@@ -13,38 +13,24 @@ angular.module("app.apis", []).factory('basicApiService', ['$http', '$location',
                 });
             },
             httpGet: function (url, param) {
-                return $http.get(this.serverAddress + url, {
-                    param: param,
+                return $http.get(this.serverAddress + url + '?' + $httpParamSerializerJQLike(param), {
                     responseType: 'json',
                     withCredentials: true,
                     paramSerializer: '$httpParamSerializerJQLike',
                     headers: { 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8' }
                 });
             },
-            validatetoken: function (callback) {
-                return this.httpGet('/api/validatetoken').success(function (data) {
-                    if (data.Code === -10) {
-                        this.refreshToken();
-                    }
-                    return callback();
+            validatetoken: function () {
+                return this.httpGet('/api/validatetoken');
+            },
+            token: function () {
+                return this.httpGet('/api/token', {
+                    appid: '49c33442bfaacd2ae6803bdd06fd2eea',
+                    appsecret: '802f4fd9dc97c53eb0873cac09a52b04'
                 });
             },
-            refreshToken: function () {
-                return this.httpGet('/api/_WebToken', {
-                    appid: 'ObisoftWebSelf',
-                    appsecret: 'ObisoftWebSelf'
-                });
-            },
-            signinStatus: function (callback) {
-                this.httpGet('/api/signinStatus').success(function (data) {
-                    if (data.Code === -3) {
-                        this.reLogin();
-                    }
-                    callback();
-                });
-            },
-            reLogin: function () {
-
+            signinStatus: function () {
+                return this.httpGet('/api/signinStatus');
             },
             index: function () {
                 return this.httpGet('/api/index');
@@ -52,11 +38,24 @@ angular.module("app.apis", []).factory('basicApiService', ['$http', '$location',
             changeLanguage: function (target) {
                 return this.httpPost('/api/changeLanguage', { culture: target });
             },
-            logIn:function(email,password,rememberme){
-                return this.httpPost('/api/login',{
-                    email:email,
-                    password:password,
-                    rememberme:rememberme
+            logIn: function (email, password, rememberme) {
+                return this.httpPost('/api/login', {
+                    email: email,
+                    password: password,
+                    rememberme: rememberme
+                });
+            },
+            userInfo: function () {
+                return this.httpGet('/api/UserInfo');
+            },
+            logoff: function () {
+                return this.httpPost('/api/logoff', {});
+            },
+            register: function (email, password, confirmpassword) {
+                return this.httpPost('/api/register', {
+                    Email: email,
+                    Password: password,
+                    ConfirmPassword: confirmpassword
                 });
             }
 
@@ -189,5 +188,6 @@ angular.module("app.apis", []).factory('basicApiService', ['$http', '$location',
             //     return this.obiGet(this.ServerAddress + 'GroupDetails/'+id)
             // }
         };
+        methods.token();
         return methods;
     }]);

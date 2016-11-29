@@ -8,8 +8,8 @@ angular.module('app.signup', [])
         password: '',
         agree: false
     };
-    basicApiService.getloginstatus().success(function (data) {
-        if (data.Value == true) {
+    basicApiService.signinStatus().success(function (data) {
+        if (data.Code == 0) {
             $location.path('');
         }
     }).error(function (data) {
@@ -22,7 +22,7 @@ angular.module('app.signup', [])
         basicApiService.register(currentC.userInfo.email,
         currentC.userInfo.password,
         currentC.userInfo.repassword).success(function (data) {
-            if (data.StatusCode == 200) {
+            if (data.Code == 0) {
                 basicApiService.setBasicInfo(null, null, currentC.userInfo.fullName, null, null).success(function (data) {
                     $location.path('');
                     userInfo.refreshUsername();
@@ -30,7 +30,7 @@ angular.module('app.signup', [])
                     $location.path('pages/500');
                 });
             }
-            else if (data.StatusCode == 406) {
+            else if (data.Code == -10) {
                 if (currentC.userInfo.password.length >= 6) {
                     currentC.errorinfo = 'Please input a valid Email address!';
                 }
@@ -38,7 +38,7 @@ angular.module('app.signup', [])
                     currentC.errorinfo = 'Password must be longer than 6 words!';
                 }
             }
-            else if (data.StatusCode == 409) {
+            else if (data.Code == -7) {
                 currentC.errorinfo = 'An user with Email "' + currentC.userInfo.email + '" already exists!';
             }
         }).error(function (data) {
