@@ -1,0 +1,74 @@
+.widget-comments {
+  float: left;
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+  background: #fff;
+  .widgetcomment-item {
+    float: left;
+    width: 100%;
+    padding: 15px 10px 8px;
+    line-height: 15px;
+    border-bottom: 1px solid #fff;
+	position: relative;
+    .item-img {
+      width: 60px;
+      height: 60px;
+      margin: -42px 10px 20px 0px;
+      border: 3px solid #FFF;
+      -moz-border-radius: 50%;
+      -webkit-border-radius: 50%;
+      border-radius: 50%;
+      float: left;
+    }
+    .item-img2 {
+      width: 55px;
+      height: 55px;
+      margin: -3px 10px 0px 0px;
+      border: 2px solid #FFF;
+      -moz-border-radius: 50%;
+      -webkit-border-radius: 50%;
+      border-radius: 50%;
+      float: left;
+    }
+    .item-img3 {
+      width: 50px;
+      height: 50px;
+      margin: -3px 10px 0px 0px;
+      border: 2px solid #FFF;
+      -moz-border-radius: 50%;
+      -webkit-border-radius: 50%;
+      border-radius: 50%;
+      float: left;
+    }
+    p {
+      margin-bottom: 0px;
+      line-height: 16px;
+      margin-bottom: 5px;
+      font-size: 11px;
+      &.widgetcomment-head {
+        font-size: 13px;
+		font-weight: 700;
+        a {
+          font-size: 13px;
+          font-weight: 700;
+          color: #333;
+        }
+      }
+    }
+    small {
+      line-height: 10px;
+    }
+    &:first-child {
+      border-top: 1px solid #fff;
+    }
+  }
+  .widgetcomment-write {
+    float: left;
+    width: 100%;
+    padding: 5px;
+    .form-control {
+      border-color: #d0e8ff;
+    }
+  }
+}

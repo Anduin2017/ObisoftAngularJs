@@ -1,0 +1,129 @@
+/*==================================
+  :: Nav Horizontal
+  ==================================*/
+
+@media (max-width: 991px ) { // make '.open' class effective mobile only
+    .nav-horizontal {
+        .nav {
+            > li {
+                &.open {
+                    > a {
+                        background-color: darken($sidebar_bg, 5%);
+                        color: $brand-primary;
+                    }
+                    > .fa { color: $brand-primary; }                
+                }
+
+            }
+        }        
+    }
+}
+
+
+// Horizontal nav is desktop only
+@media (min-width: 768px) {
+
+    .main-container {
+
+        > .nav-container.nav-horizontal {
+            float: none;
+            width: auto;
+            
+            // content
+            & + .content-container {
+                margin-left: 0;
+            }
+        }
+    }
+
+    .nav-horizontal {        
+        .slimScrollDiv {
+            overflow: visible !important; // overrides slimScroll plugin
+            height: auto !important;
+
+            .slimScrollBar,
+            .slimScrollRail {
+                display: none !important;
+            }
+        }        
+
+        .nav {
+            overflow: visible !important;
+
+            > li {
+                position: relative;
+				text-align:center;
+                float: left;
+                &:hover {
+                    > a {
+                        background-color: darken($horizontal_sidebar_bg, 5%);
+                        color: $text-color;
+                    }
+                    > .fa { color: $text-color; }
+                }
+                &.active {
+                    > a {
+                        color: $horizontal_link_active_color;
+                    }
+                    > .fa { color: $horizontal_link_active_color; }
+                }
+
+                > a {
+                    text-align: center;
+                    font-weight: normal;
+					padding: 10px 14px;
+
+                    > .fa {
+                        margin: 0;
+                        font-size: 20px;
+                        line-height: 1;
+                    }
+
+                    span {
+                        margin: 0px 5px 0;
+                        display: block;
+                        font-size: 12px;
+                    }
+
+                    .badge {
+                        top: 15px;
+                    }
+                }
+
+                &:hover {
+                    > ul {
+                        display: block !important;
+                    }
+                }
+
+
+                
+                // sub menu
+                > ul {
+                    z-index: 9; // less then header, so that it's below header dropdown
+                    position: absolute;
+                    left: 0;
+                    top: 100%;
+                    min-width: 100%;
+                    width: auto;
+
+                    li {
+                        white-space: nowrap;
+                        &:hover,
+                        &.active {
+                            > a {
+                                color: $brand-primary;
+                            }
+                        }
+
+                        > a {
+                            padding: 13px 26px 13px 20px;
+							text-align:left;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}

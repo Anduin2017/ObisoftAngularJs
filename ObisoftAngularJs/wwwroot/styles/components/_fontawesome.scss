@@ -1,0 +1,33 @@
+/*=======================================
+  :: Fontawesome Icon
+  =======================================*/
+
+.fontawesome-icon-list {
+  margin-top: 22px;
+  .fa-hover a {
+    display: block;
+    color: #222222;
+    line-height: 32px;
+    height: 32px;
+    padding-left: 10px;
+    border-radius: 4px;
+    .fa {
+      width: 32px;
+      font-size: 14px;
+      display: inline-block;
+      text-align: center;
+      margin-right: 10px;
+    }
+    &:hover {
+      color: #333333;
+      text-decoration: none;
+      .fa {
+        font-size: 28px;
+        vertical-align: -6px;
+      }
+      .text-muted {
+        color: #bbe2d5;
+      }
+    }
+  }
+}

@@ -1,0 +1,71 @@
+/*================================
+  :: Page Header
+  ================================*/
+
+.pageheader {
+  padding: 15px;
+  position: relative;
+  background: #FFFFFF;
+  box-shadow: 0 1px 2px 0 rgba(51, 51, 51, 0.1);
+  border-top: 1px solid rgba(238, 238, 238, 0.29);
+  h3 {
+    font-size: 25px;
+    color: #343434;
+    letter-spacing: -.5px;
+    margin: 0;
+  }
+  .fa, .glyphicon {
+    font-size: 24px;
+    margin-right: 5px;
+    padding: 6px 7px;
+    border: 2px solid #343434;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 100px;
+  }
+  .fa {
+    &.fa-pencil {
+      padding: 6px 9px;
+    }
+    &.fa-hand-o-up {
+      padding: 6px 9px 6px 7px;
+    }
+  }
+  .fa-file-o, .fa-file-text, .fa-user {
+    padding: 6px 10px;
+  }
+  .fa-dollar, .fa-map-marker {
+    padding: 6px 12px;
+  }
+  .fa-clock-o {
+    padding: 6px 8px;
+  }
+  .breadcrumb-wrapper {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    .label {
+      color: #999;
+      text-transform: uppercase;
+      font-size: 11px;
+      font-weight: 400;
+      display: inline-block;
+    }
+  }
+  .breadcrumb {
+    background: 0 0;
+    display: inline-block;
+    padding: 0;
+    li {
+      font-size: 12px;
+      &.active {
+        color: #333;
+      }
+    }
+  }
+}
+
+
+.page {
+	padding: 15px;
+}

@@ -1,0 +1,117 @@
+/*====================================
+  :: Alert
+  ====================================*/
+
+.alert {
+  border: 0 none;
+  border-radius: 0px;
+  .alert-link {
+    text-decoration: underline;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.alert-primary {
+  background-color: #5699d6;
+  border-color: transparent;
+  color: #fff;
+  .alert-link, .close {
+    color: #1e4e7a;
+  }
+}
+
+.alert-info {
+  background-color: #4dbcea;
+  border-color: transparent;
+  color: #fff;
+  .alert-link, .close {
+    color: #116c92;
+  }
+}
+
+.alert-success {
+  background-color: #96c762;
+  border-color: transparent;
+  color: #fff;
+  .alert-link, .close {
+    color: #4b6d27;
+  }
+}
+
+.alert-warning {
+  background-color: #feb346;
+  border-color: transparent;
+  color: #fff;
+  .alert-link, .close {
+    color: #b26901;
+  }
+}
+
+.alert-danger {
+  background-color: #eb6650;
+  border-color: transparent;
+  color: #fff;
+  .alert-link, .close {
+    color: #972411;
+  }
+}
+
+.alert-mint {
+  background-color: #2ebda1;
+  border-color: transparent;
+  color: #fff;
+  .alert-link, .close {
+    color: #0a463a;
+  }
+}
+
+.alert-purple {
+  background-color: #9d73be;
+  border-color: transparent;
+  color: #fff;
+  .alert-link, .close {
+    color: #52326c;
+  }
+}
+
+.alert-pink {
+  background-color: #ed7fbd;
+  border-color: transparent;
+  color: #fff;
+  .alert-link, .close {
+    color: #c21c79;
+  }
+}
+
+.alert-dark {
+  background-color: #4d4f57;
+  border-color: transparent;
+  color: #fff;
+  .alert-link, .close {
+    color: #010101;
+  }
+}
+
+.ez-alert-container .ez-alert-item {
+  overflow: hidden;
+  margin-bottom: -5px;
+  max-height: 0;
+  &.ez-show {
+    max-height: 90px;
+    -webkit-transition: max-height 0.5s ease-in;
+    -moz-transition: max-height 0.5s ease-in;
+    -ms-transition: max-height 0.5s ease-in;
+    -o-transition: max-height 0.5s ease-in;
+    transition: max-height 0.5s ease-in;
+  }
+  &.ez-hide {
+    max-height: 0;
+    -webkit-transition: max-height 0.5s ease-out;
+    -moz-transition: max-height 0.5s ease-out;
+    -ms-transition: max-height 0.5s ease-out;
+    -o-transition: max-height 0.5s ease-out;
+    transition: max-height 0.5s ease-out;
+  }
+}

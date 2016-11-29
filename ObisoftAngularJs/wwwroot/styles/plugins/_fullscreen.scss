@@ -1,0 +1,28 @@
+body.fullscreen-widget-active {
+  overflow: hidden;
+  position: fixed;
+  .animated {
+    -webkit-animation-fill-mode: none;
+    animation-fill-mode: none;
+    -webkit-animation-name: none;
+    animation-name: none;
+  }
+  .panel .panel-heading .panel-toolbar > {
+    .fa-chevron-down, .fa-times {
+      display: none;
+    }
+  }
+}
+
+.panel.widget-fullscreen {
+  display: block;
+  z-index: 9999;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  overflow-y: auto;
+}

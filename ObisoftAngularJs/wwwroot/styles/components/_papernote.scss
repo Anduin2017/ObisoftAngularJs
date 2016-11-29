@@ -1,0 +1,41 @@
+/*===================================
+  :: Paper Note
+  ===================================*/
+
+.papernote {
+  color: #777;
+  background: #f6f6f3;
+  position: relative;
+  border: 1px solid #eeeeee;
+  background-image: -webkit-radial-gradient(#d6d5d6 30%, transparent 20%), -webkit-radial-gradient(#cfcfc3 38%, transparent 24%), -webkit-linear-gradient(top, hsla(0, 0%, 0%, 0) 0%, hsla(0, 0%, 0%, 0) 95%, hsla(180, 75%, 50%, 0.1) 95%, hsla(180, 75%, 50%, 0.1) 100%);
+  background-image: -moz-radial-gradient(#d6d5d6 30%, transparent 20%), -moz-radial-gradient(#cfcfc3 38%, transparent 24%), -moz-linear-gradient(top, hsla(0, 0%, 0%, 0) 0%, hsla(0, 0%, 0%, 0) 95%, hsla(180, 75%, 50%, 0.1) 95%, hsla(180, 75%, 50%, 0.1) 100%);
+  background-image: radial-gradient(#d6d5d6 30%, transparent 20%), radial-gradient(#cfcfc3 38%, transparent 24%), linear-gradient(top, hsla(0, 0%, 0%, 0) 0%, hsla(0, 0%, 0%, 0) 95%, hsla(180, 75%, 50%, 0.1) 95%, hsla(180, 75%, 50%, 0.1) 100%);
+  background-position: 4px 1px, 4px 0px, 50% 0px;
+  background-repeat: repeat-y,  repeat-y, repeat;
+  background-size: 30px 30px, 30px 30px, 30px 30px;
+  padding: 0px 0px 0px 45px;
+  &:after {
+    border-left: 2px solid hsla(0, 95%, 50%, 0.1);
+    border-right: 2px solid hsla(0, 95%, 50%, 0.1);
+    bottom: 0;
+    content: '';
+    left: 60px;
+    position: absolute;
+    top: 0;
+    width: 3px;
+  }
+  h4 {
+    text-decoration: none;
+	line-height: 25px;
+	color: #95a2a9;
+	padding: 0px 15px;
+  }
+  p {
+    text-decoration: none;
+	line-height: 25px;
+	font-style:italic;
+	color: #95a2a9;
+	font-size:14px;
+	padding: 0px 15px;
+  }
+}
