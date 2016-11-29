@@ -1,0 +1,185 @@
+/*======================================
+  :: ng-Table
+  ======================================*/
+
+.ng-table {
+  th {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    &.sortable {
+      cursor: pointer;
+      div {
+        padding-right: 18px;
+        position: relative;
+        &:after {
+          content: "";
+          border-width: 0 4px 4px;
+          border-style: solid;
+          border-color: #000 transparent;
+          visibility: visible;
+          right: 8px;
+          top: 50%;
+          position: absolute;
+          opacity: .3;
+          margin-top: -4px;
+        }
+        &:before {
+          content: "";
+          border-width: 0 4px 4px;
+          border-style: solid;
+          border-color: #000 transparent;
+          visibility: visible;
+          right: 8px;
+          top: 50%;
+          position: absolute;
+          opacity: .3;
+          margin-top: -4px;
+          margin-top: 2px;
+          border-bottom: none;
+          border-left: 4px solid transparent;
+          border-right: 4px solid transparent;
+          border-top: 4px solid #000;
+        }
+        &:hover {
+          &:after, &:before {
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+      }
+      &.sort-desc, &.sort-asc {
+        text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+      }
+      &.sort-desc div:after, &.sort-asc div:after {
+        margin-top: -2px;
+      }
+      &.sort-desc div:before {
+        visibility: hidden;
+      }
+      &.sort-asc div {
+        &:before {
+          visibility: hidden;
+        }
+        &:after, &:hover:after {
+          visibility: visible;
+          filter: alpha(opacity = 60);
+          -khtml-opacity: 0.6;
+          -moz-opacity: 0.6;
+          opacity: 0.6;
+        }
+      }
+      &.sort-desc div:after {
+        border-bottom: none;
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent;
+        border-top: 4px solid #000;
+        visibility: visible;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+        filter: alpha(opacity = 60);
+        -khtml-opacity: 0.6;
+        -moz-opacity: 0.6;
+        opacity: 0.6;
+      }
+    }
+    &.filter .input-filter {
+      margin: 0;
+      display: block;
+      width: 100%;
+      min-height: 30px;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+  }
+  + .pagination {
+    margin-top: 0;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .ng-table-responsive {
+    border-bottom: 1px solid #999999;
+    tr {
+      border-top: 1px solid #999999;
+      border-left: 1px solid #999999;
+      border-right: 1px solid #999999;
+    }
+    td:before {
+      position: absolute;
+      padding: 8px;
+      left: 0;
+      top: 0;
+      width: 50%;
+      white-space: nowrap;
+      text-align: left;
+      font-weight: bold;
+    }
+    thead tr {
+      th {
+        text-align: left;
+      }
+      &.ng-table-filters th {
+        padding: 0;
+        form > div {
+          padding: 8px;
+        }
+      }
+    }
+    td {
+      border: none;
+      border-bottom: 1px solid #eeeeee;
+      position: relative;
+      padding-left: 50%;
+      white-space: normal;
+      text-align: left;
+      &:before {
+        content: attr(data-title-text);
+      }
+    }
+    display: block;
+    thead, tbody, th, td, tr {
+      display: block;
+    }
+  }
+}
+
+.ng-table {
+  .plus, .minus {
+    font-weight: bold;
+    padding-left: 18px;
+    position: relative;
+  }
+  .plus:before, .minus:before {
+    content: "";
+    border-width: 4px;
+    border-style: solid;
+    left: 8px;
+    top: 50%;
+    position: absolute;
+    margin-top: -2px;
+  }
+  .plus {
+    color: green;
+    &:before {
+      border-color: green;
+      border-top: none;
+      border-left: 4px solid transparent;
+      border-right: 4px solid transparent;
+    }
+  }
+  .minus {
+    color: red;
+    &:before {
+      border-color: red;
+      border-bottom: none;
+      border-left: 4px solid transparent;
+      border-right: 4px solid transparent;
+    }
+  }
+}

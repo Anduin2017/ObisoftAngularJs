@@ -1,0 +1,86 @@
+/*====================================
+  :: Tabs
+  ====================================*/
+.nav {
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+  &:before {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    content: " ";
+    display: table;
+    clear: both;
+  }
+  > li {
+    position: relative;
+    display: block;
+    > a {
+      position: relative;
+      display: block;
+      padding: 10px 15px;
+      &:hover, &:focus {
+        text-decoration: none;
+        background-color: #ffffff;
+      }
+    }
+    &.disabled > a {
+      color: #777777;
+      &:hover, &:focus {
+        color: #777777;
+        text-decoration: none;
+        background-color: transparent;
+        cursor: not-allowed;
+      }
+    }
+  }
+  .open > a {
+    background-color: #eeeeee;
+    border-color: #337ab7;
+    &:hover, &:focus {
+      background-color: #eeeeee;
+      border-color: #337ab7;
+    }
+  }
+  .nav-divider {
+    height: 1px;
+    margin: 9px 0;
+    overflow: hidden;
+    background-color: #e5e5e5;
+  }
+  > li > a > img {
+    max-width: none;
+  }
+}
+
+.nav-tabs {
+  border: 1px solid #eee;
+  > li {
+    float: left;
+    margin-bottom: -1px;
+    > a {
+      margin-right: 2px;
+      line-height: 1.42857;
+      border: 2px solid transparent;
+      &:hover {
+        border-color: transparent transparent #ddd;
+      }
+    }
+    &.active > a {
+      color: #555555;
+      background-color: #fff;
+      border: 2px solid transparent;
+      border-bottom-color: #f3565d;
+      cursor: default;
+      &:hover, &:focus {
+        color: #555555;
+        background-color: #fff;
+        border: 2px solid transparent;
+        border-bottom-color: #f3565d;
+        cursor: default;
+      }
+    }
+  }
+}

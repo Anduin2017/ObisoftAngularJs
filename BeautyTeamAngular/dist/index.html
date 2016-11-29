@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="SensationApp">
+<head>
+    <meta charset="utf-8">
+    <meta name="fragment" content="!">
+    <title>BeautyTeam Angular</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="styles/font-awesome.css">
+    <link rel="stylesheet" href="styles/weather-icons.css">
+    <link rel="stylesheet" href="styles/main.css"/>
+    <link rel="stylesheet" href="styles/waves.css">
+</head>
+<body ng-controller="AppCtrl">
+    <div id="app" class="app" data-custom-page="" data-off-canvas-nav="" ng-class="{'layout-boxed': admin.layout}">
+        <header ng-controller="HeaderCtrl" ng-include="'views/header.html'" id="header" class="header-container {{admin.navbarHeaderColor}}" ng-class="{'header-fixed': admin.fixedHeader}"> </header>
+        <div class="main-container">
+            <aside ng-include="'views/nav.html'" id="nav-container" class="nav-container {{admin.asideColor}}" ng-class="{'nav-fixed': admin.fixedSidebar, 'nav-horizontal': admin.menu }"> </aside>
+            <div id="content" class="content-container animate-fade-up" ng-view=""> </div>
+            <div id="config" class="config hidden-xs" ng-include="'views/settings/setting-panel.html'"></div>
+            <aside id="rsidebar" class="rsidebar hidden-xs" ng-include="'views/rightsidebar/rightsidebar.html'"> </aside>
+        </div>
+    </div>
+    <div>
+        <script src="scripts/ui.js"></script>
+    </div>
+    <div>
+        <script src="scripts/app.js"></script>
+    </div>
+</body>
+</html>

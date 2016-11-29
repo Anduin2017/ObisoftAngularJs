@@ -1,0 +1,109 @@
+/*==========================================
+  :: Theme Setting Panel
+  ==========================================*/
+
+@media print {
+   .no-print{
+        display:none;
+    }
+}
+
+div.config {
+  background: #F0F3F3;
+  width: 300px;
+  position: fixed;
+  top: 120px;
+  z-index: 1002;
+  border-radius: 0 0 0 5px;
+  right: -300px;
+  div.config-swatch-wrap {
+    margin: 10px;
+    position: relative;
+  }
+  h4 {
+    background-color: #1D212A;
+    color: #fff;
+    padding: 2px 0 5px 10px;
+    margin: 0;
+    line-height: 30px;
+    font-size: 13px;
+    a {
+      background-color: #1D212A;
+      display: block;
+      height: 37px;
+      position: absolute;
+      left: -40px;
+      top: 0;
+      width: 40px;
+      font-size: 17px;
+      line-height: 40px;
+      color: #FFF;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 5px 0 0 5px;
+      i {
+        margin-right: 5px;
+      }
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.config-swatch-wrap .options {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  li {
+    &.title {
+      font-weight: 700;
+      font-size: 0.813em;
+      text-transform: uppercase;
+      padding: 5px 10px;
+      width: 100%;
+    }
+    width: 100%;
+    padding: 5px 0;
+  }
+  .theme-style-wrapper {
+    height: 30px;
+    border: 1px solid #E0E0E0;
+    span {
+      &.header {
+        width: 50%;
+        height: 10px;
+        float: left;
+      }
+      &.nav {
+        width: 50%;
+        height: 20px;
+        float: left;
+      }
+    }
+    .bg-white {
+      background: #fff;
+    }
+    .bg-dark {
+      background: #1D212A;
+    }
+    .bg-info {
+      background: #1f7bb6;
+    }
+    .bg-grey {
+      background: #909aa0;
+    }
+    .bg-red {
+      background: #e25d5d;
+    }
+    .bg-green {
+      background: #27b6af;
+    }
+    .bg-dark-blue {
+      background: #556b8d;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

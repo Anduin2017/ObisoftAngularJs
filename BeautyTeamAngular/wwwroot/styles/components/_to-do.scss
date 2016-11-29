@@ -1,0 +1,80 @@
+/*==================================
+  :: To Do List
+  ==================================*/
+
+.todo-list .list-group {
+  border-radius: 2px;
+  margin: 0px;
+  padding: 0px;
+  &.list-group-item {
+    padding: 9px;
+    border-color: #edf1f2;
+    margin: 0;
+    a.list-group-item {
+      &:hover, &:focus, &.hover {
+         background-color: #f6f8f8;
+       }
+     }
+  }
+  &.no-radius .list-group-item {
+    border-radius: 0 !important;
+  }
+  &.no-borders .list-group-item {
+    border: none;
+  }
+  &.no-border .list-group-item {
+    border-width: 1px 0;
+  }
+  &.no-bg .list-group-item {
+    background-color: transparent;
+  }
+}
+
+.list-group-item {
+  &.media {
+    margin-top: 0;
+  }
+  &.active {
+    color: #fff;
+    background-color: #23b7e5 !important;
+    border-color: #23b7e5 !important;
+    .text-muted {
+      color: #ace4f5 !important;
+    }
+    a {
+      color: #fff;
+    }
+  }
+  &.focus {
+    background-color: #e4eaec !important;
+  }
+  &.select {
+    position: relative;
+    z-index: 1;
+    background-color: #dbeef9 !important;
+    border-color: #c5e4f5;
+  }
+}
+
+.list-group-alt .list-group-item:nth-child(2n+2) {
+  background-color: rgba(0, 0, 0, 0.02) !important;
+}
+
+.list-group-item > {
+  .badge {
+    margin-right: 0;
+  }
+  .fa-chevron-right {
+    float: right;
+    margin-top: 4px;
+    margin-right: -5px;
+    + .badge {
+      margin-right: 5px;
+    }
+  }
+}
+
+.done-true {
+    text-decoration: line-through;
+    color: grey;
+}

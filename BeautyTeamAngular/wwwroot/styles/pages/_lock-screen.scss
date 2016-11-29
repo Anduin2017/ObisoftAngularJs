@@ -1,0 +1,100 @@
+/*================================
+  :: Lock Screen Page
+  ================================*/
+
+.iconic-input {
+  display: block;
+  margin-bottom: 15px;
+  i {
+    display: block;
+    font-size: 16px;
+    margin: 9px 20px 9px 12px;
+    position: absolute;
+    text-align: center;
+  }
+  input {
+    padding-left: 30px !important;
+  }
+  &.right {
+    input {
+      padding-left: 10px !important;
+      padding-right: 30px !important;
+    }
+    i {
+      float: right;
+      right: 5px;
+    }
+  }
+}
+
+.lock-screen {
+  background: #e8ebec;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.lock-box {
+  padding: 20px;
+  position: relative;
+  width: 100%;
+  display: inline-block;
+}
+
+.lock-wrapper {
+	 margin: 4% auto;
+     max-width: 400px;
+  img {
+    border: none;
+  }
+  h4 {
+    text-align: center;
+    color: $brand-primary;
+    font-size: 20px;
+    margin: 10px 0;
+  }
+  .locked {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    line-height: 36px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    display: inline-block;
+    color: $white;
+    text-align: center;
+    background: $brand-primary;
+    top: -25px;
+    right: 120px;
+    border: 4px solid $white;
+    font-size: 22px;
+  }
+  input {
+    width: 100% !important;
+    height: 34px;
+    float: left;
+    margin-bottom: 15px;
+    &:focus {
+      width: 100% !important;
+      height: 34px;
+      float: left;
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.btn-lock {
+  background: $brand-primary;
+  color: $white;
+  height: 40px;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+  &:hover {
+    background: #688ac2;
+    color: $white;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+}

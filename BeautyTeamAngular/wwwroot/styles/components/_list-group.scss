@@ -1,0 +1,54 @@
+/*================================
+  :: List Group Item
+  ================================*/
+
+.list-info {
+    li {
+        padding: 10px;
+        border-bottom: 1px solid #eee;
+
+        &:last-child {
+            border-bottom: none;
+        }
+
+        .icon { 
+            margin-right: 10px;
+            color: $brand-primary;
+        }
+
+        label { width: 100px; }
+    }
+}
+
+.stats-info ul {
+  margin: 0;
+  li {
+    border-bottom: 1px solid #eee;
+    padding: 12px 0;
+    &:last-child {
+      border-bottom: 0;
+    }
+    i {
+      margin-left: 5px;
+    }
+  }
+}
+
+.server-load {
+  > .server-stat {
+    display: inline-block;
+    margin-right: 5px;
+    margin-bottom: 20px;
+  }
+  .server-stat {
+    span {
+      font-size: 11px;
+      margin-bottom: 3px;
+    }
+    p {
+      font-weight: 600;
+      font-size: 16px;
+      margin-bottom: 3px;
+    }
+  }
+}

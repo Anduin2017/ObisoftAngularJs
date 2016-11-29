@@ -1,0 +1,129 @@
+/*==================================
+  :: Mail
+  ==================================*/
+
+.inbox-star {
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.starred {
+  color: #e9422e;
+  &:before {
+    content: "\f005";
+  }
+}
+.blockbtn {
+	padding: 0 10px;
+    margin-bottom: 20px;
+ }
+
+.mail-categories {
+    .list-group {
+        .list-group-item {
+            padding: 0;
+            &.active {
+                > a {
+                    color: $dark;
+                    background-color: #fafafa;                    
+                }
+            }
+
+            > a {
+                display: block;
+                padding: 10px;
+                text-decoration: none;
+                @include transition(all .25s ease-in-out);
+                &:hover {
+                    color: $dark;
+                    background-color: #fafafa;
+                }
+
+                > i {
+                    font-size: 16px;
+                    width: 18px;
+                    margin-right: 5px;
+                    &.fa-circle {
+                        font-size: $font-size-base;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.mail-container {
+    .mail-options {
+        padding: 12px;
+    }
+
+    .table {
+        margin-bottom: 0;
+        tr {
+            &:hover {
+                cursor: pointer;
+            }
+
+            > td {
+                padding: 12px;
+
+                > .fa-star {
+                    color: #ccc;
+
+                    &.active {
+                        color: $brand-danger;
+                    }
+                }
+            }
+        }
+
+        label.ui-checkbox {
+            margin-bottom: 0;
+        }
+
+        .mail-unread {
+            font-weight: 700;
+            color: $gray-dark;
+        }
+        .mail-hightlight {
+            td {
+                background-color: #edf1f2;
+            }
+        }
+    }
+
+    .mail-header {
+        padding: 15px 0;
+        h3 {
+            margin-top: 0;
+        }
+    }
+    .mail-info {
+        padding: 10px 15px 0 15px;
+        border-top: 1px solid #f1f1f1;
+        border-bottom: 1px solid #f1f1f1;
+
+        .col-md-8,
+        .col-md-4 {
+            padding: 0;
+        }
+    }
+    .mail-content {
+        padding: 15px 0;
+        border-bottom: 1px solid #f1f1f1;
+    }
+    .mail-attachments {
+        padding: 15px 0;
+        border-bottom: 1px solid #f1f1f1;
+    
+        .list-attachs {
+            img {
+                max-width: 200px;
+                max-height: 200px;
+            }
+        }
+    }
+    .mail-actions {
+        margin-top: 10px;
+    }
+}

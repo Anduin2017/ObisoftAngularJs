@@ -1,0 +1,19 @@
+/*===================================
+  :: Page Grid
+  ===================================*/
+
+.page-grid .grid-structure .row {
+  margin-top: 10px;
+  .widget-container {
+    margin-top: 5px;
+    background: #eee;
+    padding: 10px 15px 12px;
+    min-height: 0;
+    border-radius: 4px;
+  }
+}
+
+.page-container {
+    max-width: 1170px;
+    margin: auto;
+}

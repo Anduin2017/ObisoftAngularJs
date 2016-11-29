@@ -1,0 +1,229 @@
+/*==========================================
+  :: Responsive Table
+  ==========================================*/
+  
+table.responsive {
+  border: 1px solid #ddd;
+}
+
+@media only screen and (max-width: 767px) {
+  table.responsive {
+    margin-bottom: 0;
+  }
+  .pinned {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #fff;
+    width: 35%;
+    overflow: hidden;
+    overflow-x: scroll;
+    border-right: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    table {
+      border-top: 1px solid #ddd;
+      border-bottom: 1px solid #ddd;
+      border-right: none;
+      border-left: none;
+      width: 100%;
+      td, th {
+        white-space: nowrap;
+      }
+    }
+    td:last-child {
+      border-bottom: 0;
+    }
+  }
+  div.table-wrapper {
+    position: relative;
+    margin-bottom: 20px;
+    overflow: hidden;
+    border-right: 1px solid #ccc;
+    div.scrollable {
+      margin-left: 35%;
+      overflow: scroll;
+      overflow-y: hidden;
+    }
+  }
+  table.responsive {
+    td, th {
+      position: relative;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+    td:first-child, th:first-child, &.pinned td {
+      display: none;
+    }
+  }
+}
+
+/* Hidden Table Info */
+@media only screen and (max-width: 800px) {
+  .adv-table table {
+    td:nth-child(2), th:nth-child(2) {
+      display: none;
+    }
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .adv-table table {
+    td:nth-child(4), th:nth-child(4), td:nth-child(7), th:nth-child(7), td:nth-child(8), th:nth-child(8) {
+      display: none;
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .adv-table table {
+    td:nth-child(2), th:nth-child(5), td:nth-child(6) {
+      display: none;
+    }
+  }
+}
+
+/*Unseen Column*/
+@media only screen and (max-width: 800px) {
+  .unseen table {
+    td:nth-child(2), th:nth-child(2) {
+      display: none;
+    }
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .unseen table {
+    td:nth-child(4), th:nth-child(4), td:nth-child(7), th:nth-child(7), td:nth-child(8), th:nth-child(8) {
+      display: none;
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .unseen table {
+    td:nth-child(2), th:nth-child(2), td:nth-child(4) {
+      display: none;
+    }
+  }
+}
+
+/*flip-scroll*/
+
+@media only screen and (max-width: 800px) {
+  .table-flip-scroll {
+    .cf:after {
+      visibility: hidden;
+      display: block;
+      font-size: 0;
+      content: " ";
+      clear: both;
+      height: 0;
+    }
+    * html .cf, :first-child + html .cf {
+      zoom: 1;
+    }
+    table {
+      border-collapse: collapse;
+      border-spacing: 0;
+    }
+    td, th {
+      margin: 0;
+      vertical-align: top;
+    }
+    table {
+      display: block;
+      position: relative;
+      width: 100%;
+    }
+    thead {
+      display: block;
+      float: left;
+    }
+    tbody {
+      display: block;
+      width: auto;
+      position: relative;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    thead tr {
+      display: block;
+    }
+    .table > thead > tr > th:first-child {
+      border-top: 1px solid #ddd;
+    }
+    th {
+      display: block;
+      text-align: right;
+    }
+    tbody tr {
+      display: inline-block;
+      vertical-align: top;
+    }
+    td {
+      display: block;
+      min-height: 1.25em;
+      text-align: left;
+    }
+    th {
+      border-bottom: 0;
+      border-left: 0;
+    }
+    td {
+      border-left: 0;
+      border-right: 0;
+      border-bottom: 0;
+    }
+    tbody tr {
+      border-left: 1px solid #babcbf;
+    }
+    td:last-child, th:last-child {
+      border-bottom: 1px solid #babcbf;
+    }
+  }
+}
+
+/*no more table*/
+
+@media only screen and (max-width: 800px) {
+  /* Force table to not be like tables anymore */
+  #no-more-tables {
+    table, thead, tbody, th, td, tr {
+      display: block;
+    }
+    thead tr {
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+    }
+    tr {
+      border: 1px solid #ccc;
+    }
+    td {
+      /* Behave like a "row" */
+      border: none;
+      border-bottom: 1px solid #eee;
+      position: relative;
+      padding-left: 50%;
+      white-space: normal;
+      text-align: left;
+      &:before {
+        /* Now like a table header */
+        position: absolute;
+        /* Top/left values mimic padding */
+        top: 6px;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        text-align: left;
+        font-weight: bold;
+        content: attr(data-title);
+      }
+    }
+  }
+  /* Hide table headers (but not display: none;, for accessibility) */
+  /*
+  Label the data
+  */
+}

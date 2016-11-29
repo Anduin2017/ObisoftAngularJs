@@ -1,0 +1,342 @@
+/*=======================================
+  :: Jquery Steps Wizard
+   =======================================*/
+
+.tabcontrol, .wizard {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+}
+
+.tabcontrol a, .wizard a {
+  outline: 0;
+}
+
+.tabcontrol ul, .wizard ul {
+  list-style: none!important;
+  padding: 0;
+  margin: 0;
+}
+
+.tabcontrol ul > li, .wizard ul > li {
+  display: block;
+  padding: 0;
+}
+
+.tabcontrol > {
+  .content > .title, .steps .current-info {
+    position: absolute;
+    left: -999em;
+  }
+}
+
+.wizard {
+  > {
+    .content > .title {
+      position: absolute;
+      left: -999em;
+    }
+    .steps {
+      .current-info {
+        position: absolute;
+        left: -999em;
+      }
+      position: relative;
+      display: block;
+      width: 100%;
+      > ul > li {
+        width: 100%;
+      }
+    }
+  }
+  &.vertical {
+    > {
+      .steps {
+        display: block;
+        width: 100%;
+        > ul > li {
+          float: none;
+          width: 100%;
+        }
+      }
+      .content {
+        width: 100%;
+      }
+    }
+    > .actions {
+      display: inline;
+      float: right;
+      margin: 0 2.5%;
+      width: 95%;
+    }
+    > .actions > ul > li {
+      margin: 0 0 0 1em;
+    }
+  }
+  > {
+    .steps .number {
+      font-size: 1.429em;
+    }
+    .actions > ul > li {
+      float: left;
+    }
+    .steps {
+      > ul > li {
+        float: left;
+      }
+      a {
+        display: block;
+        margin: 0 .5em .5em;
+        padding: 12px 19px;
+        text-decoration: none;
+        border-radius: 5px;
+        &:active, &:hover {
+          display: block;
+          margin: 0 .5em .5em;
+          padding: 12px 19px;
+          text-decoration: none;
+          border-radius: 5px;
+        }
+      }
+      .disabled a {
+        background: #eee;
+        color: #aaa;
+        cursor: default;
+        &:active, &:hover {
+          background: #eee;
+          color: #aaa;
+          cursor: default;
+        }
+      }
+      .current a {
+        background: #00b1e1;
+        color: #fff;
+        cursor: default;
+        &:active, &:hover {
+          background: #00b1e1;
+          color: #fff;
+          cursor: default;
+        }
+      }
+      .done a {
+        background: #91c854;
+        color: #fff;
+        opacity: 0.6;
+        &:active, &:hover {
+          background: #91c854;
+          color: #fff;
+          opacity: 0.6;
+        }
+      }
+      .error a {
+        background: #ed5466;
+        color: white;
+        &:active, &:hover {
+          background: #ed5466;
+          color: white;
+        }
+      }
+    }
+    .content {
+      display: block;
+      margin: .5em;
+      min-height: 25em;
+      overflow: hidden;
+      position: relative;
+      width: auto;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      border-radius: 4px;
+      > .body {
+        float: left;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        padding: 1%;
+        background: #f9f9f9;
+        ul {
+          list-style: disc !important;
+          > li {
+            display: list-item;
+          }
+        }
+        > iframe {
+          border: 0 none;
+          width: 100%;
+          height: 100%;
+        }
+        input {
+          display: block;
+          border: 1px solid #cccccc;
+          &[type=checkbox] {
+            display: inline-block;
+          }
+          &.error {
+            background: #fbe3e4;
+            border: 1px solid #fbc2c4;
+            color: #8a1f11;
+          }
+        }
+        label {
+          display: inline-block;
+          margin-bottom: 0.5em;
+          &.error {
+            color: #8a1f11;
+            display: inline-block;
+            margin-left: 1.5em;
+          }
+        }
+      }
+    }
+    .actions {
+      position: relative;
+      display: block;
+      text-align: right;
+      width: 100%;
+    }
+  }
+  > .actions > ul {
+    display: inline-block;
+    text-align: right;
+    > li {
+      margin: 0 0.5em;
+    }
+  }
+  > .actions {
+    a {
+      display: inline-block;
+      margin-bottom: 0;
+      font-weight: 400;
+      text-align: center;
+      vertical-align: middle;
+      cursor: pointer;
+      background-image: none;
+      border: 1px solid transparent;
+      white-space: nowrap;
+      padding: 6px 12px;
+      font-size: 14px;
+      line-height: 1.42857;
+      border-radius: 4px;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      color: #767676;
+      background-color: #fcfdfd;
+      background-color: #fff;
+      border-color: #dee5e7;
+      border-bottom-color: #d8e1e3;
+      -webkit-box-shadow: 0 1px 1px rgba(90, 90, 90, 0.1);
+      box-shadow: 0 1px 1px rgba(90, 90, 90, 0.1);
+      &:hover {
+        color: #58666e !important;
+        background-color: #edf1f2;
+        border-color: #c7d3d6;
+      }
+    }
+    .disabled a {
+      background: #eee;
+      color: #aaaaaa;
+      &:active, &:hover {
+        background: #eee;
+        color: #aaaaaa;
+      }
+    }
+  }
+}
+
+@media (min-width: 600px) {
+  .wizard > .steps > ul > li {
+    width: 25%;
+  }
+}
+
+@media (min-width: 600px) {
+  .wizard.vertical > .steps {
+    display: inline;
+    float: left;
+    width: 30%;
+  }
+}
+
+@media (min-width: 600px) {
+  .wizard.vertical > .content {
+    display: inline;
+    float: left;
+    margin: 0 2.5% .5em;
+    width: 65%;
+  }
+}
+
+.tabcontrol > {
+  .steps {
+    position: relative;
+    display: block;
+    width: 100%;
+    > ul {
+      position: relative;
+      margin: 6px 0 0;
+      top: 1px;
+      z-index: 1;
+      > li {
+        float: left;
+        margin: 5px 2px 0 0;
+        padding: 1px;
+        -webkit-border-top-left-radius: 4px;
+        -webkit-border-top-right-radius: 4px;
+        -moz-border-radius-topleft: 4px;
+        -moz-border-radius-topright: 4px;
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+        &:hover {
+          background: #edecec;
+          border: 1px solid #bbb;
+          padding: 0;
+        }
+        &.current {
+          background: #fff;
+          border: 1px solid #bbb;
+          border-bottom: 0 none;
+          padding: 0 0 1px;
+          margin-top: 0;
+          > a {
+            padding: 15px 30px 10px;
+          }
+        }
+        > a {
+          color: #5f5f5f;
+          display: inline-block;
+          border: 0 none;
+          margin: 0;
+          padding: 10px 30px;
+          text-decoration: none;
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+  .content {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 35em;
+    overflow: hidden;
+    border-top: 1px solid #bbb;
+    padding-top: 20px;
+    > .body {
+      float: left;
+      position: absolute;
+      width: 95%;
+      height: 95%;
+      padding: 2.5%;
+      ul {
+        list-style: disc !important;
+        > li {
+          display: list-item;
+        }
+      }
+    }
+  }
+}

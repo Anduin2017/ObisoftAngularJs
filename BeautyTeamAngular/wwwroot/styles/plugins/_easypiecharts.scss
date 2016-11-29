@@ -1,0 +1,83 @@
+/*====================================
+  :: Easy Pie Chart
+  ====================================*/
+
+$pie_width_xs: 80px;
+$pie_width_sm: 120px;
+$pie_width: 140px;
+
+.easypiechart {
+    display: inline-block;
+    position: relative;
+    width: $pie_width;
+    height: $pie_width;
+    text-align: center;
+    margin: 10px auto; 
+
+     canvas {
+        position: absolute;
+        top: 0;
+        left: 0; 
+    }
+
+    .pie-percent {
+        display: inline-block;
+        line-height: $pie_width;
+        font-size: 28px;
+        font-weight: 300;
+        color: #333; 
+        &:after {
+            content: '%';
+            margin-left: 0.1em;
+            font-size: .6em;
+        }
+    }
+
+    &.easypiechart-sm {
+        width: $pie_width_sm;
+        height: $pie_width_sm;
+        .pie-percent {
+            font-size: 28px;
+            line-height: $pie_width_sm;
+        }
+	}
+    &.easypiechart-xs {
+        width: $pie_width_xs;
+        height: $pie_width_xs;
+        .pie-percent {
+            font-size: 14px;
+            line-height: $pie_width_xs;
+        }
+    }
+}
+
+.left-easypiechart-data span, .right-easypiechart-data span {
+  display: block;
+}
+
+.left-easypiechart-data {
+  text-align: right;
+  font-size: 13px;
+  position: relative;
+  top: 10px;
+  padding-right: 10px;
+}
+
+.right-easypiechart-data {
+  text-align: left;
+  font-size: 13px;
+  position: relative;
+  top: 10px;
+  padding-left: 10px;
+}
+
+.left-easypiechart-data .sell-percent {
+  color: #f9a10c;
+  font-size: 14px;
+}
+
+.right-easypiechart-data .sell-percent {
+  color: #36d8c0;
+  padding-top: 30px;
+  font-size: 14px;
+}

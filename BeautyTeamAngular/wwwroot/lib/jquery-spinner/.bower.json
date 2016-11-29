@@ -1,0 +1,14 @@
+{
+  "name": "jquery-spinner",
+  "homepage": "https://github.com/vsn4ik/jquery-spinner",
+  "version": "0.1.6",
+  "_release": "0.1.6",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.1.6",
+    "commit": "ea2dabfc93c832469bb3f236c4e6d1b3327ca072"
+  },
+  "_source": "https://github.com/vsn4ik/jquery-spinner.git",
+  "_target": "~0.1.5",
+  "_originalSource": "jquery-spinner"
+}

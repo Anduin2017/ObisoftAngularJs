@@ -1,0 +1,164 @@
+$bootstrap-sass-asset-helper: (twbs-font-path("") != unquote('twbs-font-path("")')) !default;
+//
+// Variables
+// --------------------------------------------------
+
+
+//## Gray and brand colors for use across Bootstrap.
+
+$gray-darker:            lighten(#000, 13.5%) !default; // #222
+$gray-dark:              lighten(#000, 20%) !default;   // #333
+$gray:                   lighten(#000, 33.5%) !default; // #555
+$gray-light:             lighten(#000, 60%) !default;   // #999
+$gray-lighter:           lighten(#000, 93.5%) !default; // #eee
+$light_gray:             #ccc;
+
+//Colors
+
+$brand-primary:         #01A4A4 !default;
+$brand-success:         #61AE24 !default;
+$brand-info:            #00A1CB !default;
+$brand-info-alt:        #7266ba !default;
+$brand-purple:          #967ADC !default;
+$brand-warning:         #F18D05 !default;
+$brand-danger:          #E54028 !default;
+$brand-azure:           #00d5e6 !default;
+
+
+$skin:                  $brand-primary;
+$skin-light:            #40DEC8;
+$dark:                  #34425A;
+$bright:                #FAFAFA;
+$reverse:               #FFFFFF;
+$white:                 #FFFFFF;
+
+$state-default-bg:              #F6F6F6; // also: pagination bg
+$state-default-border:          darken(adjust-hue($state-default-bg, -10), 5%); 
+$state-default-border-light:    #F3F3F3;
+
+// Scaffolding
+
+//## Settings for some of the most global styles.
+
+/** Background color for `<body>`. */
+
+$body-bg:              #E9EDF2 !default;
+
+/** Global text color on `<body>`. */
+
+$text-color:            #788288 !default;
+
+/** Global textual link color. */
+
+$link-color:            $gray-dark !default;
+
+//** Link hover color set via `darken()` function. */
+
+$link-hover-color:      darken($link-color, 15%) !default;
+
+//** Layout **//
+
+$boxed_layout_width:    1200px;
+
+//** Top Header **//
+
+$header_height:             60px;
+$header_container_bg:       $brand-primary;
+
+$main_container_bg:         #eeeeee;
+
+// Sidebar default is vertical
+$sidebar_bg:                #2f343b;
+$sub_nav_bg:                #1b1a1f;
+$link_color:                $text-color;
+$link_active_bg:            $sub_nav_bg;
+
+$horizontal_sidebar_bg:                #30363e;
+$horizontal_sub_nav_bg:                #1b1a1f;
+$horizontal_link_color:                $text-color;
+$horizontal_link_active_bg:            #000000;
+$horizontal_link_active_color:         $brand-primary;
+
+
+//** Typography **//
+
+//## Font, line-height, and color for body text, headings, and more.
+
+$font-family-sans-serif:  'Open Sans', sans-serif !default;
+
+// Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
+
+$font-family-monospace:   menlo, monaco, consolas, "courier cew", monospace !default;
+$font-family-base:        $font-family-sans-serif !default;
+
+$font-size-base:          12px !default;
+$font-size-large:         ceil(($font-size-base * 1.25)) !default; // ~18px
+$font-size-small:         ceil(($font-size-base * 0.85)) !default; // ~12px
+
+$font-size-h1:            floor(($font-size-base * 2.6)) !default; // ~36px
+$font-size-h2:            floor(($font-size-base * 2.15)) !default; // ~30px
+$font-size-h3:            ceil(($font-size-base * 1.7)) !default; // ~24px
+$font-size-h4:            ceil(($font-size-base * 1.25)) !default; // ~18px
+$font-size-h5:            $font-size-base !default;
+$font-size-h6:            ceil(($font-size-base * 0.85)) !default; // ~12px
+
+// Unit-less `line-height` for use in components like buttons.
+
+$line-height-base:        1.428571429 !default; // 20/14
+
+// Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
+$line-height-computed:    floor(($font-size-base * $line-height-base)) !default; // ~20px
+
+// By default, this inherits from the `<body>`.
+
+$headings-font-family:    inherit !default;
+$headings-font-weight:    500 !default;
+$headings-line-height:    1.1 !default;
+$headings-color:          inherit !default;
+
+// Iconography
+
+//## Specify custom locations of the include Glyphicons icon font. Useful for those including Bootstrap via Bower.
+
+// Load fonts from this directory.
+
+$icon-font-path:          "../fonts/" !default;
+// File name for all font files.
+
+$icon-font-name:          "glyphicons-halflings-regular" !default;
+
+// Element ID within SVG icon file.
+
+$icon-font-svg-id:        "glyphicons_halflingsregular" !default;
+
+// Components
+
+//## Define common padding and border radius sizes and more. Values based on 14px text and 1.428 line-height (~20px to start).
+
+$padding-base-vertical:     6px !default;
+$padding-base-horizontal:   12px !default;
+
+$padding-large-vertical:    10px !default;
+$padding-large-horizontal:  16px !default;
+
+$padding-small-vertical:    5px !default;
+$padding-small-horizontal:  10px !default;
+
+$padding-xs-vertical:       1px !default;
+$padding-xs-horizontal:     5px !default;
+
+$line-height-large:         1.33 !default;
+$line-height-small:         1.5 !default;
+
+$border-radius-base:        4px !default;
+$border-radius-large:       6px !default;
+$border-radius-small:       2px !default;
+
+//Forms
+
+// Default `.form-control` height
+$input-height-base:              ($line-height-computed + ($padding-base-vertical * 2) + 2) !default;
+// Large `.form-control` height
+$input-height-large:             (ceil($font-size-large * $line-height-large) + ($padding-large-vertical * 2) + 2) !default;
+// Small `.form-control` height
+$input-height-small:             (floor($font-size-small * $line-height-small) + ($padding-small-vertical * 2) + 2) !default;

@@ -1,0 +1,78 @@
+/*==================================
+  :: Nav Section
+  ==================================*/
+
+.nav-section {
+  &.nav-justified > li {
+    display: table-cell;
+    width: 1%;
+  }
+  > li {
+    position: relative;
+    > {
+      .section, a {
+        position: relative;
+        margin: 0;
+        text-align: center;
+      }
+      .section:after, a:after {
+        position: absolute;
+        z-index: 1;
+        content: "";
+        width: 1px;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-image: -webkit-linear-gradient(top, rgba(215, 224, 226, 0.2) 0, #d7e0e2 50%, rgba(215, 224, 226, 0.2) 100%);
+        background-image: -moz-linear-gradient(top, rgba(215, 224, 226, 0.2) 0, #d7e0e2 50%, rgba(215, 224, 226, 0.2) 100%);
+        background-image: -o-linear-gradient(top, rgba(215, 224, 226, 0.2) 0, #d7e0e2 50%, rgba(215, 224, 226, 0.2) 100%);
+        background-image: linear-gradient(to bottom, rgba(215, 224, 226, 0.2) 0, #d7e0e2 50%, rgba(215, 224, 226, 0.2) 100%);
+      }
+    }
+    &:last-child > {
+      .section:after, a:after {
+        background: 0 0;
+        filter: none;
+      }
+    }
+  }
+}
+.nav-boxed {
+    box-shadow: 0 0 2px rgba(0,0,0,.2);
+
+    // overrides Bootstrap
+    &.nav-justified > li > a {
+        margin: 0;
+    }
+
+    background-color: $reverse;
+    border-radius: $border-radius-base;
+    > li {
+        > a {
+            display: block;
+            padding: 10px 5px;
+            border-left: 0;
+            border-top: 1px solid $state-default-border-light;
+            @media (min-width: 768px) {
+                border-top: 0;
+                border-left: 1px solid $state-default-border-light;
+            }
+
+            > i {
+                display: block;
+                width: 40px;
+                height: 40px;
+                line-height: 40px;
+                margin: 0 auto 2px;
+                font-size: 30px;
+            }
+        }
+        &:first-child > a {
+            border-left: none;
+            border-top: 0;
+            @media (min-width: 768px) {
+                border-left: 1px solid $state-default-border-light;
+            }
+        }
+    }
+}

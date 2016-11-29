@@ -1,0 +1,54 @@
+/*================================
+  :: Invoice Page
+  ================================*/
+
+.page-invoice {
+
+    .invoice-wrapper {
+        padding: 0 0 30px;
+        background-color: $white;
+    }
+
+}
+
+.invoice-title h3 {
+  display: inline-block;
+}
+
+.table > {
+  tbody > tr > .no-line {
+    border-top: none;
+  }
+  thead > tr > .no-line {
+    border-bottom: none;
+  }
+  tbody > tr > .thick-line {
+    border-top: 2px solid;
+  }
+}
+
+.invoice-inner {
+  padding: 15px 15px 30px;
+  background-color: $white;
+
+    .invoice-sum {
+        li {
+            margin-bottom: 5px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: $border-radius-base;
+        }
+    }
+
+    .table {
+        &.table-bordered {
+            border: 0;
+        }
+
+        .bg-dark {
+            > th {
+                border: 0;
+            }
+        }
+    }
+}

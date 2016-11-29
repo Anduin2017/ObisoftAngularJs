@@ -1,0 +1,44 @@
+/*==================================
+  :: Media
+  ==================================*/
+
+.media, .media-body {
+  overflow: hidden;
+  zoom: 1;
+}
+
+.media {
+  margin-top: 15px;
+  .media {
+    margin-top: 15px;
+  }
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+.media-object {
+  display: block;
+  > img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.media-heading {
+  margin: 0 0 5px;
+}
+
+.media > {
+  .pull-left {
+    margin-right: 10px;
+  }
+  .pull-right {
+    margin-left: 10px;
+  }
+}
+
+.media-list {
+  padding-left: 0;
+  list-style: none;
+}

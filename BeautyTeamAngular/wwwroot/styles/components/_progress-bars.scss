@@ -1,0 +1,21 @@
+/*===================================
+  :: Progress Bar
+  ===================================*/
+
+.progress {
+    box-shadow: none;
+    background-color: #ececec;
+	height: 16px;
+}
+
+.progress-rounded {
+    border-radius: 50px;
+}
+.progress-bar {
+    box-shadow: none;
+}
+
+// custom
+.progressbar-md { height: 14px; }
+.progressbar-xs { height: 6px; }
+.progressbar-sm { height: 12px; }

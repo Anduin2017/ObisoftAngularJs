@@ -1,0 +1,86 @@
+/*==================================
+  :: Ui Map
+  ==================================*/
+
+.ui-map {
+	display: block;
+	height: 400px
+}
+.ui-map-175 {
+	display: block;
+	height: 175px
+}
+
+.ui-map-250 {
+	display: block;
+	height: 250px
+}
+
+.contactus-map {
+  margin-bottom: 5px;
+}
+
+.portlet .contactus-map:last-child {
+  margin-bottom: 0;
+}
+
+.contactus-map {
+  &:before {
+    display: table;
+    line-height: 0;
+    content: "";
+  }
+  &:after {
+    display: table;
+    line-height: 0;
+    content: "";
+    clear: both;
+  }
+  .visual {
+    display: inline;
+    float: left;
+    padding-top: 10px;
+    i {
+      font-size: 65px;
+      line-height: 65px;
+      color: $white;
+    }
+  }
+  .details {
+    position: absolute;
+    right: 15px;
+    padding-right: 5px;
+    .number {
+      text-align: right;
+      padding-top: 15px;
+      font-size: 20px;
+      letter-spacing: -1px;
+      margin-bottom: 5px;
+    }
+    .desc {
+      text-align: right;
+      font-size: 13px;
+      letter-spacing: 0px;
+      font-weight: 600;
+    }
+  }
+}
+
+.map-addressbar {
+  display: inline-block;
+  .addressbar-text {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 8px 0px 0px 10px;
+  }
+  .text-muted {
+    text-transform: uppercase;
+    font-size: 10px;
+  }
+  h4 {
+    margin: 0;
+    font-weight: bold;
+    line-height: normal;
+    font-size: 16px;
+  }
+}
