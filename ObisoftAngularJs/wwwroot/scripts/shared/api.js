@@ -57,6 +57,13 @@ angular.module("app.apis", []).factory('basicApiService', ['$http', '$location',
                     Password: password,
                     ConfirmPassword: confirmpassword
                 });
+            },
+            setProfile: function (nick, phone, IconAddress) {
+                return this.httpPost('/api/SetProfile', {
+                    nick: nick,
+                    phone: phone,
+                    IconAddress: IconAddress
+                });
             }
         };
         methods.token();

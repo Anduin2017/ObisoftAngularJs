@@ -23,7 +23,7 @@ angular.module('app.signup', [])
         currentC.userInfo.password,
         currentC.userInfo.repassword).success(function (data) {
             if (data.Code == 0) {
-                basicApiService.setBasicInfo(null, null, currentC.userInfo.fullName, null, null).success(function (data) {
+                basicApiService.setProfile(currentC.userInfo.fullName).success(function (data) {
                     $location.path('');
                     userInfo.refreshUsername();
                 }).error(function (data) {
