@@ -71,18 +71,6 @@ angular.module("app.controllers", ['angular-loading-bar', 'ngTable'])
                     }).error(function (data) {
                         $location.path('pages/500');
                     });
-                    // basicApiService.getloginstatus().success(function (data) {
-                    //     if (data.Value == true) {
-                    //         basicApiService.currentUser().success(function (data) {
-                    //             userInfo.userNick = data.Object.NickName;
-                    //             userInfo.userIcon = data.Object.IconImage;
-                    //         });
-                    //     }
-                    //     else {
-                    //         $location.path('pages/signin');
-                    //     }
-                    // }).error(function (data) {
-                    // });
                 }
             };
             return userInfo;

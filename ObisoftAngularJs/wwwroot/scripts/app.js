@@ -39,7 +39,8 @@ angular.module('ObisoftAngularJs', [
 'FullscreenApp',
 'galleryApp',
 'datatables',
-'app.support'
+'app.support',
+'app.article'
 ])
 .config([
 '$routeProvider', function ($routeProvider) {
@@ -92,7 +93,8 @@ angular.module('ObisoftAngularJs', [
     'settings/settings-panel',
     'support/community',
     'support/faq',
-    'support/settings'
+    'support/settings',
+    'support/article'
     ];
     routes.forEach(function (route) {
         var url = '/' + route;

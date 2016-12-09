@@ -67,6 +67,12 @@ angular.module("app.apis", []).factory('basicApiService', ['$http', '$location',
             },
             partArticles: function (id) {
                 return this.httpGet('/api/PartArticles/' + id)
+            },
+            communityParts: function () {
+                return this.httpGet('/api/CommunityParts');
+            },
+            communityArticle: function (id) {
+                return this.httpGet('/api/CommunityArticle/' + id);
             }
         };
         methods.token();
