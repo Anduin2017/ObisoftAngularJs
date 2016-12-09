@@ -1,4 +1,4 @@
-﻿/// <binding />
+/// <binding AfterBuild='build' />
 'use strict';
 var LIVERELOAD_PORT, lrSnippet, mountFolder;
 

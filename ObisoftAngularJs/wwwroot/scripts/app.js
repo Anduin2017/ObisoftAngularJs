@@ -38,7 +38,8 @@ angular.module('ObisoftAngularJs', [
 'xeditable',
 'FullscreenApp',
 'galleryApp',
-'datatables'
+'datatables',
+'app.support'
 ])
 .config([
 '$routeProvider', function ($routeProvider) {
@@ -88,7 +89,10 @@ angular.module('ObisoftAngularJs', [
     'mail/mailview',
     'calender/calender',
     'ngtable/ngtable',
-    'settings/settings-panel'
+    'settings/settings-panel',
+    'support/community',
+    'support/faq',
+    'support/settings'
     ];
     routes.forEach(function (route) {
         var url = '/' + route;

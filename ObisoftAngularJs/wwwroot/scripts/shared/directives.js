@@ -40,7 +40,7 @@ function () {
         controller: function ($scope, $element, $window) {
             $scope.toggleProfile = function () {
                 $window.scrollTo(0, 0);
-                $('#settings').slideToggle();
+                $('#settings').slideToggle('fast');
             };
         }
     };

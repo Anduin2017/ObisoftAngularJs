@@ -64,6 +64,9 @@ angular.module("app.apis", []).factory('basicApiService', ['$http', '$location',
                     phone: phone,
                     IconAddress: IconAddress
                 });
+            },
+            partArticles: function (id) {
+                return this.httpGet('/api/PartArticles/' + id)
             }
         };
         methods.token();

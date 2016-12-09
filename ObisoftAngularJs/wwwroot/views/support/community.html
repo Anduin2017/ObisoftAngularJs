@@ -1,0 +1,119 @@
+﻿<div id="settings" ng-include="'views/settings/settings.html'" style="display:none"></div>
+
+<section class="panel panel-default" ng-controller="communityController">
+    <tabset class="tab-block">
+        <tab heading="Timeline">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-md-12" ng-init="initArticles()">
+
+                            <!-- START TIMELINE -->
+                            <div class="profile-timeline timeline-right">
+
+                                <!-- START TIMELINE ITEM -->
+                                <div class="timeline-item timeline-main">
+                                    <div class="timeline-date bg-primary">Now</div>
+                                </div>
+                                <!-- END TIMELINE ITEM -->
+                                <!-- START TIMELINE ITEM -->
+                                <div class="timeline-item timeline-item-right" ng-repeat="art in articles">
+                                    <div class="timeline-item-icon bg-purple"><span class="fa fa-check"></span></div>
+                                    <div class="timeline-item-content">
+                                        <div class="timeline-heading"> <img ng-src="{{art.IconAddress}}" alt="" /> {{art.PublisherNickName}} posted a new blog. </div>
+                                        <div class="timeline-body">
+                                            <img src="images/gallery/image1.png" alt="" class="img-text" width="150" align="left" />
+                                            <h4>{{art.Title| limitTo:20}}...</h4>
+                                            <p>{{delHtmlTag(art.Content) | limitTo:200}}...</p>
+                                        </div>
+                                        <div class="timeline-footer">
+                                            <a href="javascript:void(0)">Read more</a>
+                                            <div class="pull-right">
+                                                <a href="javascript:void(0)"><span class="fa fa-comment"></span>{{art.CommentsCount}}</a>
+                                                <a href="javascript:void(0)"><span class="fa fa-eye"></span>{{art.Views}}</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- END TIMELINE -->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </tab>
+        <tab heading="Projects">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Project</th>
+                                <th> Project Deadline </th>
+                                <th>Status</th>
+                                <th>Client</th>
+                                <th>Progress</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>IT Help Desk</td>
+                                <td>11 Feb 2015</td>
+                                <td><span class="label label-danger">Critical</span></td>
+                                <td>Amery Lee</td>
+                                <td><progressbar class="progressbar-xs no-margin" value="55"></progressbar></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Product Dev</td>
+                                <td>12 june 2015</td>
+                                <td><span class="label label-warning">High</span></td>
+                                <td>Romayne Carlyn</td>
+                                <td><progressbar class="progressbar-xs no-margin" value="34" type="success"></progressbar></td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td> Website Redesign</td>
+                                <td>11 november 2015</td>
+                                <td><span class="label label-success">Normal</span></td>
+                                <td>Marybeth Joanna</td>
+                                <td><progressbar class="progressbar-xs no-margin" value="68" type="info"></progressbar></td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td> Local Ad </td>
+                                <td>15 april 2015</td>
+                                <td><span class="label label-success">Normal</span></td>
+                                <td>Jonah Benny</td>
+                                <td><progressbar class="progressbar-xs no-margin" value="52" type="warning"></progressbar></td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Design new theme</td>
+                                <td>2 May 2015</td>
+                                <td><span class="label label-warning">High</span></td>
+                                <td>Daly Royle</td>
+                                <td><progressbar class="progressbar-xs no-margin" value="77" type="danger"></progressbar></td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>Mockup Testing</td>
+                                <td>6 June 2015</td>
+                                <td><span class="label label-info">On Hold</span></td>
+                                <td>Jane Swift</td>
+                                <td><progressbar class="progressbar-xs no-margin" value="55" type="success"></progressbar></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </tab>
+    </tabset>
+</section>
+
+
+
+

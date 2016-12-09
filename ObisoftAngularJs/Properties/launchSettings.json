@@ -1,0 +1,21 @@
+{
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": false,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:9000/",
+      "sslPort": 0
+    }
+  },
+  "profiles": {
+    "IIS Express": {
+      "commandName": "IISExpress"
+    },
+    "Grunt": {
+      "commandName": "grunt",
+      "commandLineArgs": "default",
+      "workingDirectory": "D:\\MyProjects\\ObisoftAngularJs\\ObisoftAngularJs",
+      "launchBrowser": true
+    }
+  }
+}
