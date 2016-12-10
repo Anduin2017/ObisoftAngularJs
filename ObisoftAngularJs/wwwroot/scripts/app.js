@@ -94,7 +94,8 @@ angular.module('ObisoftAngularJs', [
     'support/community',
     'support/faq',
     'support/settings',
-    'support/article'
+    'support/article',
+    'support/publish'
     ];
     routes.forEach(function (route) {
         var url = '/' + route;

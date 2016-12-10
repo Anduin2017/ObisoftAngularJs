@@ -10,10 +10,10 @@ angular.module('app.support', [])
         });
         //alert('h');
     };
-    $scope.delHtmlTag = function (str) {
-        var reTag = /<(?:.|\s)*?>/g;
-        return str.replace(reTag, "");
-    };
+    //$scope.delHtmlTag = function (str) {
+    //    var reTag = /<(?:.|\s)*?>/g;
+    //    return str.replace(reTag, "");
+    //};
     $scope.initParts = function () {
         basicApiService.communityParts().success(function (data) {
             $scope.parts = data.Result;
