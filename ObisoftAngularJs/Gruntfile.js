@@ -295,7 +295,7 @@ module.exports = function (grunt) {
     'concat',
     'uglify',
     'usemin']);
-    grunt.registerTask('hint',['jshint']);
+    grunt.registerTask('hint', ['jshint']);
     grunt.registerTask('lessBuild', [
     'clean:dist',
     'useminPrepare',
